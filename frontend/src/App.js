@@ -18,31 +18,32 @@ function App() {
     <Router>
       <Grid padding='20px'>
         <Routes>
-          <Route
-            path="/"
-            element={<Login setLoggedIn={setLoggedIn} isLoggedIn={isLoggedIn} />}
-          />
-          <Route
-            path="/register"
-            element={<Login setLoggedIn={setLoggedIn} isLoggedIn={isLoggedIn}/>}
-          />
-          <Route
-            path="/home"
-            element={isLoggedIn ? <Home /> : <Navigate to="/" />}
-          />
-          <Route
-            path="/addCustomers"
-            element={isLoggedIn ? <AddCustomers /> : <Navigate to="/" />}
-          />
-          <Route
-            path="/customerCard"
-            element={isLoggedIn ? <CustomerCard /> : <Navigate to="/" />}
-          />
-          < Route
-            path="/report"
-            element =  { isLoggedIn ? <ReportPage /> : <Navigate to="/" />}
-          />
-        </Routes>
+  <Route
+    path="/"
+    element={<Login setLoggedIn={setLoggedIn} isLoggedIn={isLoggedIn} />}
+  />
+  <Route
+    path="/register"
+    element={<Register setLoggedIn={setLoggedIn} isLoggedIn={isLoggedIn} />}
+  />
+  <Route
+    path="/home"
+    element={isLoggedIn ? <Home /> : <Navigate to="/" />}
+  />
+  <Route
+    path="/addCustomers"
+    element={isLoggedIn ? <AddCustomers /> : <Navigate to="/" />}
+  />
+  <Route
+    path="/customerCard"
+    element={isLoggedIn ? <CustomerCard /> : <Navigate to="/" />}
+  />
+  <Route
+    path="/report"
+    element={isLoggedIn ? <ReportPage /> : <Navigate to="/" />}
+  />
+</Routes>
+
       </Grid>
     </Router>
   );
